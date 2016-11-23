@@ -16,8 +16,8 @@ namespace MinhaWebApi.Models
         [Required, DataType(DataType.Password)]
         public string senha { get; set; }
 
-        public virtual ICollection<Post> posts { get; set; }
-        public virtual ICollection<Comentario> comentarios { get; set; }
+        public ICollection<Post> posts { get; set; }
+        public ICollection<Comentario> comentarios { get; set; }
 
     }
 }

@@ -13,6 +13,6 @@ namespace MinhaWebApi.Models
         [Required]
         public string nome { get; set; }
 
-        public virtual ICollection<Post> posts { get; set; }
+        public ICollection<Post> posts { get; set; }
     }
 }

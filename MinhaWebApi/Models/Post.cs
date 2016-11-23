@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace MinhaWebApi.Models
@@ -15,9 +18,13 @@ namespace MinhaWebApi.Models
         public string conteudo { get; set; }
 
         public DateTime criado { get; set; }
-        
+
         public Categoria categoria { get; set; }
-        public Usuario usuario { get; set; }
+
+        public virtual Usuario usuario { get; set; }
+        public int? UsuarioId { get; set; }
+
         public ICollection<Comentario> comentarios { get; set; }
+        
     }
 }

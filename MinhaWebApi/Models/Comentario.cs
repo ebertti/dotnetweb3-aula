@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace MinhaWebApi.Models
         public string texto { get; set; }
         public DateTime criado { get; set; }
         
-        public Post post { get; set; }
-        public Usuario usuario { get; set; }
+        public virtual Post post { get; set; }
+        public virtual Usuario usuario { get; set; }
     }
 }

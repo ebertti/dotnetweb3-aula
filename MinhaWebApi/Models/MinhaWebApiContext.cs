@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -20,5 +21,17 @@ namespace MinhaWebApi.Models
         }
 
         public System.Data.Entity.DbSet<MinhaWebApi.Models.Post> Posts { get; set; }
+
+        public System.Data.Entity.DbSet<MinhaWebApi.Models.Categoria> Categorias { get; set; }
+
+        public System.Data.Entity.DbSet<MinhaWebApi.Models.Comentario> Comentarios { get; set; }
+
+        public System.Data.Entity.DbSet<MinhaWebApi.Models.Usuario> Usuarios { get; set; }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }

@@ -170,12 +170,20 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\api\CategoriasController.cs" />
+    <Compile Include="Controllers\api\ComentariosController.cs" />
     <Compile Include="Controllers\api\PostsController.cs" />
+    <Compile Include="Controllers\api\UsuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611231643526_Inicio.cs" />
+    <Compile Include="Migrations\201611231643526_Inicio.Designer.cs">
+      <DependentUpon>201611231643526_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Comentario.cs" />
     <Compile Include="Models\MinhaWebApiContext.cs" />
     <Compile Include="Models\Post.cs" />
@@ -238,7 +246,11 @@
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611231643526_Inicio.resx">
+      <DependentUpon>201611231643526_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
